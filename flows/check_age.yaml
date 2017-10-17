@@ -1,0 +1,22 @@
+name: age_checker
+states:
+    ask:
+        component: meya.input_string
+        properties:
+            text: 'How old are you?'
+            output: age
+    check:
+        component: age_checker
+        transitions:
+            over: over
+            under: under
+    over:
+        component: meya.text
+        properties:
+            text: 'Yassss'
+        return: true
+    under:
+        component: meya.text
+        properties:
+            text: 'Sorry but no'
+        return: true

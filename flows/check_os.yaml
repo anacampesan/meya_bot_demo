@@ -1,0 +1,21 @@
+name: check_os
+states:
+  greet:
+    component: meya.text
+    properties:
+      text: 'Good afternoon!'
+    return: true
+  ask:
+    component: meya.input_string
+    properties:
+      text: 'Would you like to verify the version of your OS?'
+      output: choice
+  # check:
+  #   component: meya.conditional_equal
+  #   properties:
+  #     value1:
+  print:
+    component: meya.text
+    properties:
+      text: choice
+    return: true

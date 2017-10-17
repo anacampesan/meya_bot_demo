@@ -1,4 +1,4 @@
-name: age_checker
+name: check_age
 states:
     ask:
         component: meya.input_string
@@ -6,7 +6,7 @@ states:
             text: 'How old are you?'
             output: age
     check:
-        component: age_checker
+        component: check_age
         transitions:
             over: over
             under: under
